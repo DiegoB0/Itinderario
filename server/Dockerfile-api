@@ -1,0 +1,20 @@
+#Imagen de node
+FROM node:16.20.0
+
+#Crear directorio app dentro del contenedor
+WORKDIR /app
+
+#Copiar el contenido del proyecto dentro de docker
+COPY package.json package-lock.json /app/
+COPY src /app/src/
+
+#Instlar dependencias
+RUN npm install
+
+#Compilar el codigo a javascript
+RUN npm run build
+
+EXPOSE 3000
+
+#Correr el codigo
+CMD ["npm", "start"]

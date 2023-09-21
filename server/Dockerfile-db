@@ -1,0 +1,10 @@
+#Imagen de mysql 
+FROM mysql:latest
+
+#Correr el script de la bd dentro del contenedor de docker
+COPY ./src/db/init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306
+
+#Correr el servicio de mysql 
+CMD ["mysqld"]

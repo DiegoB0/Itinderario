@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql-container:
+    image: mysql-file
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+  my-api-container:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    ports:
+      - "3000:3000"
