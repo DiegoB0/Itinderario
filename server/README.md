@@ -18,10 +18,10 @@ git clone https://github.com/DiegoB0/Itinderario.git
 2. En la raíz del proyecto, crea un archivo `.env` y configura las siguientes
    variables de entorno:
 
-MYSQL_HOST=docker_container_name
-MYSQL_USERNAME=username.example
-MYSQL_PASSWORD=password.example
-MYSQL_DATABASE=database.example
+ - MYSQL_HOST=docker_container_name
+ - MYSQL_USERNAME=username.example
+ - MYSQL_PASSWORD=password.example
+ - MYSQL_DATABASE=database.example
 
 ## Ejecución
 
