@@ -12,7 +12,9 @@
     "docker-stop": "docker stop mysql-container",
     "docker-remove": "docker rm mysql-container",
     "docker-api-build": "docker build -t web-api -f Dockerfile-api .",
-    "docker-api-run": "docker run -d --name my-api-container -p 3000:3000 web-api"
+    "docker-api-run": "docker run -d --name my-api-container -p 3000:3000 web-api",
+    "docker-api-stop": "docker stop my-api-container",
+    "docker-api-remove": "docker rm my-api-container"
   },
   "keywords": [],
   "author": "",

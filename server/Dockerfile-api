@@ -11,10 +11,13 @@ COPY src /app/src/
 #Instlar dependencias
 RUN npm install
 
-#Compilar el codigo a javascript
-RUN npm run build
+#Compilar el codigo a javascript (Descomentar cuando se haga el deploy)
+#RUN npm run build
 
 EXPOSE 3000
 
-#Correr el codigo
-CMD ["npm", "start"]
+#Correr el codigo (Descomentar cuando se haga el deploy)
+#CMD ["npm", "start"]
+
+#Correr la aplicacion en desarrollo (Comentar cuando se haga el deploy)
+CMD ["npm", "run", "dev"]
